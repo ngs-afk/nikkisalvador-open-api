@@ -1,0 +1,324 @@
+/* Desktop First */
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid rgb(54, 69, 79);
+    border-radius: 10px;
+    background-color: rgb(70, 70, 70);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    color: rgb(255, 215, 0);
+    text-align: center;
+    font-size: 36px;
+    margin-top: 0;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: lighter;
+    color: rgb(255, 215, 0);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+a {
+    color: rgb(255, 215, 0);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+a:visited {
+    color: rgb(169, 169, 169);
+}
+
+section p, section ul {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+#Skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding-left: 0;
+    list-style: none;
+}
+
+#Skills ul li {
+    background-color: rgb(54, 69, 79);
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#Projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 0;
+    margin: 0;
+}
+
+#Projects li {
+    background-color: rgb(54, 69, 79);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 250px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#Projects li:hover {
+    background color: rgb(255, 215, 0);
+    color: rgb(0, 0, 0);
+    transform: translate(-2px);
+}
+
+#leaveMessage {
+    background-color: rgb(54, 69, 79);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+}
+
+#leaveMessage h2 {
+    font-size: 28px;
+    color: rgb(255, 215, 0);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: rgb(255, 255, 255);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: rgb(85, 85, 85);
+    color: rgb(255, 255, 255);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: rgb(255, 215, 0);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(255, 185, 0);
+}
+
+#messages {
+    margin-top: 40px;
+}
+
+#messages ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#messages li {
+    background-color: rgb(54, 69, 79);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button[type="button"] {
+    padding: 5px 10px;
+    background-color: rgb(255, 85, 85);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: rgb(255, 55, 55);
+}
+
+footer {
+    text-align: center;
+}
+
+/* Tablet Media Query */
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+        color: rgb(54, 69, 79);
+    }
+
+    h2 {
+        font-size: 24px;
+        color: rgb(255, 215, 0);
+    }
+
+    section ul {
+        font-size: 14px;
+        background-color: rgb(60, 60, 60);
+        padding-left: 20px;
+    }
+
+    #Skills ul {
+        justify-content: center;
+    }
+
+    #Skills ul li {
+        width: 150px;
+    }
+
+    #Projects li {
+        font-size: 17px;
+        padding: 14px;
+    }
+
+    #leaveMessage {
+        padding: 15px;
+        margin: 10px;
+        width: auto;
+        max-width: none;
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    textarea, 
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 15px;
+    }
+}
+
+/* Mobile Media Query */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+        color: rgb(54, 69, 79);
+    }
+
+    h2 {
+        font-size: 20px;
+        color: rgb(255, 215, 0);
+    }
+
+    section ul {
+        font-size: 12px;
+        background-color: rgb(50, 50, 50);
+        padding-left: 10px;
+    }
+
+    #Skills ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Skills ul li {
+        width: 100%;
+    }
+
+    #Projects li {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #leaveMessage {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    textarea, 
+    button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    #messages ul {
+        padding-left: 0;
+    }
+
+    #messages li {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
