@@ -1,30 +1,49 @@
-const githubUsername = 'ngs-afk';
+const peopleLink = document.getElementById('people-link');
+const planetsLink = document.getElementById('planets-link');
+const shipsLink = document.getElementById('ships-link');
+const contentDiv = document.getElementById('content');
 
-fetch(`https://api.github.com/users/${githubUsername}/repos`)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(repositories => {
-        if (repositories.length === 0) {
-            console.log('No repositories found.');
-            alert('Oops! It looks like there are no repositories available in this Github account.');
-        } else {
-            console.log('Repositories:', repositories);
-            const projectSection = document.getElementById('Projects');
-            const projectList = projectSection.querySelector('ul');
+const apiBaseURL = 'https://swapi.tech/api/';
 
-            for (let i = 0; i < repositories.length; i++) {
-                const repository = repositories[i];
-                const project = document.createElement('li');
-                project.innerText = repository.name;
-                projectList.appendChild(project);
+let dataType = 'people';
+
+peopleLink.addEventListener('click', () => changeDataType('people'));
+planetsLink.addEventListener('click', () => changeDataType('planets'));
+shipsLink.addEventListener('click', () => changeDataType('starships'));
+
+function changeDataType(type) {
+    dataType = type;
+    fetchData(dataType);
+}
+
+function fetchData(type) {
+    contentDiv.innerHTML = '';
+
+    fetch(`${apiBaseURL}${type}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.results && data.results.length > 0) {
+                displayData(data);
+            } else {
+                displayError("No data available!");
             }
-        }
-    })
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-        alert('Sorry, something went wrong while fetching the repositories. Please try again later.');
+        })
+        .catch(() => displayError("An error occurred while fetching the data."));
+}
+
+// Function to display the data in cards
+function displayData(data) {
+    data.results.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `<h3>${item.name}</h3>`;
+        contentDiv.appendChild(card);
     });
+}
+
+function displayError(message) {
+    const errorMessage = document.createElement('p');
+    errorMessage.classList.add('error');
+    errorMessage.textContent = message;
+    contentDiv.appendChild(errorMessage);
+}

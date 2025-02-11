@@ -2,81 +2,30 @@
 <html lang="en">
 
 <head>
-    <title>Nikki Salvador's Portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale=1.0">
-    <meta name="author" content="Nikki Salvador">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikki Salvador's Open API Project</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <h1>Nikki Salvador</h1>
+
+    <header>
+        <h1>Star Wars API</h1>
+    </header>
+
     <nav>
         <ul>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Experience">Experience</a></li>
-            <li><a href="#Connect">Connect</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#" id="people-link">People</a></li>
+            <li><a href="#" id="planets-link">Planets</a></li>
+            <li><a href="#" id="ships-link">Ships</a></li>
         </ul>
     </nav>
-    
-    <section id="About">
-        <h2>About</h2>
-            <p>I'm just a millenial trying to make it in this world, so I've decided to learn coding. What I lack in experience, I make up for in curiosity and an eagerness to learn.</p>
-    </section>
-    
-    <section id="Experience">
-        <h2>Experience</h2>
-            <ul>
-                <li>HTML MySpace layouts c. 2005</li>
-            </ul>
-    </section>
-    
-    <section id="Connect">
-        <h2>Connect</h2>
-            <ul>
-                <li><a href="https://github.com/ngs-afk">GitHub</a></li>
-                <li><a href="https://www.instagram.com/3nix.mafia/">Instagram</a></li>
-         </ul>
-    </section>
-    
-    <section id="Skills">
-        <h2>Skills</h2>
-        <ul id="skill-ul"></ul>
-    </section>
-    
-    <section id="Projects">
-        <h2>Projects</h2>
-        <ul>
-        </ul>
-    </section>
-    
-    <section id="leaveMessage">
-        <h2>Leave a Message</h2>
-        <form name="leave_message" class="message-form">
-            <label for="usersName">Name:</label>
-            <input type="text" id="usersName" name="usersName" required="true">
-            <br>
 
-            <label for="usersEmail">Email:</label>
-            <input type="email" id="usersEmail" name="usersEmail" required="true">
-            <br>
-            
-            <label for="usersMessage">Message:</label>
-            <textarea name="usersMessage" id="usersMessage" required="true"></textarea>
-            <br>
-            
-            <button type="submit" value="submit" name="submit" class="submit-button">Submit</button>
-        </form>
-    </section>
+    <div id="content"></div>
+    
+    <div class="pagination-controls" id="pagination-controls"></div>
 
-    <section id="messages">
-        <h2>Messages</h2>
-        <ul>
-        </ul>
-    </section>
-
-    <script src="./js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
